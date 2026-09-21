@@ -1,0 +1,37 @@
+model,family,ensemble_member,experiments_in_multiscenario_recomputation,in_23_model_common_set,in_33_model_SSP585_ensemble,process_fidelity_score,PFS_rank,status
+ACCESS-CM2,ACCESS,r1i1p1f1,historical;ssp126;ssp245;ssp370;ssp585,yes,yes,,,analysed
+ACCESS-ESM1-5,ACCESS,r1i1p1f1,historical;ssp126;ssp245;ssp370;ssp585,yes,yes,,,analysed
+BCC-CSM2-MR,BCC,r1i1p1f1,historical;ssp126;ssp245;ssp370;ssp585,yes,yes,,,analysed
+CESM2,CESM,r4i1p1f1,historical;ssp126;ssp245;ssp370;ssp585,yes,yes,0.985,1,analysed
+CESM2-WACCM,CESM,r3i1p1f1,historical;ssp245;ssp585,no,yes,0.968,3,analysed
+CMCC-CM2-SR5,CMCC,r1i1p1f1,historical;ssp126;ssp245;ssp370;ssp585,yes,yes,,,analysed
+CMCC-ESM2,CMCC,r1i1p1f1,historical;ssp126;ssp245;ssp370;ssp585,yes,yes,,,analysed
+CNRM-CM6-1,CNRM,r1i1p1f1,-,no,yes,,,historical daily precipitation incomplete in the archive used for the multi-scenario recomputation; included in the 33-model SSP5-8.5 ensemble
+CNRM-ESM2-1,CNRM,r1i1p1f1,-,no,yes,,,historical daily precipitation incomplete in the archive used for the multi-scenario recomputation; included in the 33-model SSP5-8.5 ensemble
+CanESM5,CanESM,r1i1p1f1,historical;ssp126;ssp245;ssp370;ssp585,yes,yes,0.512,21,analysed
+EC-Earth3,EC-Earth,r1i1p1f1,historical;ssp126;ssp245;ssp370;ssp585,yes,yes,0.802,19,analysed
+EC-Earth3-Veg-LR,EC-Earth,r1i1p1f1,historical;ssp126;ssp245;ssp370;ssp585,yes,yes,,,analysed
+FGOALS-g3,FGOALS,r3i1p1f1,historical;ssp126;ssp245;ssp370;ssp585,yes,yes,0.827,18,analysed
+GFDL-CM4,GFDL,r1i1p1f1,historical;ssp245;ssp585,no,yes,0.91,10,analysed
+GFDL-CM4_gr2,GFDL,r1i1p1f1,historical;ssp245;ssp585,no,no,,,excluded: alternative-grid copy of GFDL-CM4
+GFDL-ESM4,GFDL,r1i1p1f1,historical;ssp126;ssp245;ssp370,no,yes,,,analysed
+GFDL-ESM41,GFDL,r1i1p1f1,-,no,no,,,excluded: alternative-grid copy of GFDL-ESM4; year files not on a single grid
+GISS-E2-1-G,GISS,r1i1p1f2,historical;ssp126;ssp245;ssp370;ssp585,yes,yes,,,analysed
+HadGEM3-GC31-LL,HadGEM,r1i1p1f3,historical;ssp126;ssp245;ssp585,no,yes,,,analysed
+HadGEM3-GC31-MM,HadGEM,r1i1p1f3,historical;ssp126;ssp585,no,yes,,,analysed
+IITM-ESM,IITM,r1i1p1f1,historical,no,yes,,,analysed
+INM-CM4-8,INM,r1i1p1f1,historical;ssp126;ssp245;ssp370;ssp585,yes,yes,0.833,17,analysed
+INM-CM5-0,INM,r1i1p1f1,historical;ssp126;ssp245;ssp370;ssp585,yes,yes,0.879,11,analysed
+IPSL-CM6A-LR,IPSL,r1i1p1f1,historical;ssp126;ssp245;ssp370;ssp585,yes,yes,0.715,20,analysed
+KACE-1-0-G,HadGEM,r1i1p1f1,historical;ssp126;ssp245;ssp370;ssp585,yes,yes,,,analysed
+KIOST-ESM,KIOST,r1i1p1f1,historical;ssp126;ssp245;ssp585,no,yes,,,analysed
+MIROC-ES2L,MIROC,r1i1p1f2,historical;ssp126;ssp245;ssp370;ssp585,yes,yes,,,analysed
+MIROC6,MIROC,r1i1p1f1,historical;ssp126;ssp245;ssp370;ssp585,yes,yes,0.973,2,analysed
+MPI-ESM1-2-HR,MPI,r1i1p1f1,historical;ssp126;ssp245;ssp370;ssp585,yes,yes,0.876,13,analysed
+MPI-ESM1-2-LR,MPI,r1i1p1f1,historical;ssp126;ssp245;ssp370;ssp585,yes,yes,0.875,14,analysed
+MRI-ESM2-0,MRI,-,-,no,no,0.859,15,excluded: historical daily precipitation unavailable
+NESM3,MPI,r1i1p1f1,historical;ssp126;ssp245;ssp585,no,yes,,,analysed
+NorESM2-LM,CESM,r1i1p1f1,historical;ssp126;ssp245;ssp370;ssp585,yes,yes,0.922,8,analysed
+NorESM2-MM,CESM,r1i1p1f1,historical;ssp126;ssp245;ssp370;ssp585,yes,yes,0.924,7,analysed
+TaiESM1,CESM,r1i1p1f1,historical;ssp126;ssp245;ssp370;ssp585,yes,yes,0.935,6,analysed
+UKESM1-0-LL,HadGEM,r1i1p1f2,historical;ssp126;ssp245;ssp370;ssp585,yes,yes,,,analysed
