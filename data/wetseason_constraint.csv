@@ -1,0 +1,13 @@
+predictor,index,region,n,r,p,p_perm,LOO,LOFO
+Historical extreme level,Rx1day,uae,33,-0.367,0.03557,0.03395,0.004,-0.015
+Historical extreme level,Rx1day,east,33,-0.318,0.07159,0.06545,-0.119,-0.05
+Historical extreme level,R95p,uae,33,-0.383,0.02771,0.02515,0.113,0.148
+Historical extreme level,R95p,east,33,-0.348,0.04696,0.04805,0.076,0.098
+Regional warming dT (unobservable),Rx1day,uae,32,0.501,0.00351,0.0032,0.218,0.217
+Regional warming dT (unobservable),Rx1day,east,32,0.417,0.01769,0.0177,0.141,0.118
+Regional warming dT (unobservable),R95p,uae,32,0.543,0.00131,0.0013,0.253,0.24
+Regional warming dT (unobservable),R95p,east,32,0.453,0.00929,0.0096,0.153,0.109
+Observed warming trend 1980-2014,Rx1day,uae,32,0.208,0.25257,0.25544,-0.043,-0.066
+Observed warming trend 1980-2014,Rx1day,east,32,0.322,0.07204,0.0726,0.04,0.04
+Observed warming trend 1980-2014,R95p,uae,32,0.242,0.1815,0.18349,-0.022,-0.03
+Observed warming trend 1980-2014,R95p,east,32,0.347,0.05192,0.0516,0.049,0.053

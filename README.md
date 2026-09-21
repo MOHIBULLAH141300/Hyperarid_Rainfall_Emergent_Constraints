@@ -27,6 +27,23 @@ This study examines why plausible observable predictors fail to constrain projec
 ### Data Files
 - `SupplementaryData1_constraint_battery.csv` - Constraint battery data
 - `SupplementaryData2_model_inventory.csv` - Model inventory
+- `data/` - Additional analysis data files
+  - `PaperB_constraint_reanalysis.csv` - Constraint reanalysis data
+  - `PaperB_model_matrix_with_dT.csv` - Model matrix with temperature differences
+  - `ec_futlevel.json` - Emergent constraint future level data
+  - `emergent_constraint_observable.csv` - Observable predictors
+  - `expanded_matrix_n33.csv` - Expanded model matrix
+  - `seasons_all.csv` - Seasonal index data
+  - `warming_constraint_n32.csv` - Warming constraint data
+  - `wetseason_constraint.csv` - Wet season constraint data
+  - `wetseason_matrix_n33.csv` - Wet season model matrix
+
+### Code Files
+- `code/` - Analysis scripts used in the study
+  - `assemble.py` - Data assembly script
+  - `diag.py`, `diag2.py`, `diag3.py` - Diagnostic scripts
+  - `ec1.py`, `ec2.py` - Emergent constraint analysis
+  - `newblocks.py` - Block analysis script
 
 ### Figures
 - `Figures/` - All figures referenced in the manuscript
