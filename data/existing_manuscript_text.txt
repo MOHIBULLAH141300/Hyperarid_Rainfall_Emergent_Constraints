@@ -1,0 +1,888 @@
+P	Historical Process Fidelity Does Not Constrain Future Extreme Rainfall in the United Arab Emirates
+P	Mohib Ullah1, Adam Fenech1,3,*, Dan Scott2, Xander Wang3, and Ross Gordon4
+P	1 Research and Excellence, Canadian University Dubai, City Walk, Al Wasl Road, Dubai, United Arab Emirates.
+P	2 Waterloo Climate Institute, University of Waterloo, 200 University Avenue West, Waterloo, ON N2L 3G1, Canada.
+P	3 School of Climate Change and Adaptation, University of Prince Edward Island, 550 University Avenue, Charlottetown, Prince Edward Island C1A 4P3, Canada.
+P	4 UTS Business School, University of Technology Sydney, 15 Broadway, Ultimo, NSW, Australia.
+P	*Corresponding author: Adam Fenech; adam.fenech@cud.ac.ae
+H:Heading2	Highlights
+P	Arabian Sea and Gulf of Oman moisture accompanies the eastward gradient
+P	Gauge-only GSOD and corrected CHIRPS give Rx1day ratios of 2.06 and 1.32
+P	A precipitation-independent Process Fidelity Score ranks 21 CMIP6 models
+P	Historical process fidelity does not predict projected rainfall change
+P	Downscaling and sampling strongly affect the projection spread
+H:Heading2	Abstract
+P	Extreme rainfall in hyperarid regions is produced by a small number of intense storms, making future changes difficult to project. We tested whether climate models that better reproduce historical circulation and moisture transport provide more reliable projections of extreme rainfall in the United Arab Emirates (UAE). The analysis combined observations from 19 rain gauges, a gauge-anchored CHIRPS rainfall field, ERA5 circulation diagnostics, and downscaled CMIP6 projections. Observations show a clear west–east rainfall gradient across the UAE. The gauge-only GSOD comparison gave east/west ratios of 1.67 for mean annual rainfall and 2.06 for annual maximum 1-day precipitation (Rx1day), whereas the station-corrected CHIRPS field yielded a smaller domain-scale Rx1day ratio of 1.32. This pattern is consistent with recurrent moisture transport from the Arabian Sea and Gulf of Oman toward the Hajar Mountains. Leave-one-station-out testing showed that CHIRPS correction factors were not transferable between locations, so the corrected field was used only to describe the spatial rainfall climatology. We then evaluated 21 CMIP6 models using a precipitation-independent score of historical circulation and moisture-transport fidelity. Although model performance differed substantially, better historical process representation did not lead to more consistent projections of future Rx1day or very wet-day precipitation (R95p) for 2076–2100 under SSP5-8.5. Correlations were close to zero, cross-validated predictive skill was negative, and none of 44 tested relationships remained significant after false-discovery correction. The same parent climate models also produced different, and in some cases opposite, changes across downscaled products. Finite-period sampling variability accounted for approximately 37–48 % of the inter-model spread. Overall, the observed eastward rainfall gradient and associated moisture pathway are robust, whereas historical process fidelity provides little constraint on the uncertain direction and magnitude of future extreme-rainfall change.
+P	Keywords: extreme rainfall; hyperarid climate; CMIP6; moisture transport; model evaluation; downscaling uncertainty; United Arab Emirates
+H:Heading1	1. Introduction
+P	Extreme rainfall in hyperarid climates is concentrated in a small number of storms, so a single event can dominate annual totals, groundwater recharge, and flood impacts. The United Arab Emirates (UAE) exemplifies this regime. Mean annual rainfall at its longest continuous gauge is approximately 81 mm, whereas the 15–16 April 2024 cut-off-low event produced about 144 mm at Dubai International Airport and a national daily maximum of approximately 259.5 mm (Francis et al., 2025). CMIP6 simulations project stronger precipitation extremes over the Arabian Peninsula during the twenty-first century (Pathak et al., 2025). Two uncertainties nevertheless remain: the national spatial climatology of rainfall extremes and whether historical model performance contains information about their future change.
+P	Both questions are difficult because UAE rainfall is intermittent, convective, and strongly modulated by topography. Gauge coverage is sparse relative to the spatial gradients of interest, while satellite–gauge products have limited daily event-detection skill and systematic coastal and orographic biases (Baig et al., 2022). Calibration at a small number of gauges can improve local agreement without establishing transferability between sites, particularly where station exposure and terrain affect gauge-to-grid ratios. A national climatology must therefore distinguish direct gauge evidence from gridded spatial completion.
+P	Large-scale circulation and moisture transport provide a second, independent line of evidence. Heavy UAE rainfall is associated with a mid-tropospheric trough north-west of the country and moisture transport from the Arabian Sea and Gulf of Oman toward the Hajar Mountains (Francis et al., 2025; Pathak et al., 2025). These fields are generally represented more directly by climate models than hyperarid precipitation itself. Their historical fidelity can therefore be evaluated independently of simulated rainfall and tested against projected changes in rainfall extremes.
+P	Such a test is informative only if the predictor–predictand relationship is physically interpretable and survives out-of-sample validation (Hall et al., 2019). Present-day precipitation variability has reduced projection spread by 20–40 % in some extratropical applications (Zhang et al., 2022), but a circulation score has no predetermined relationship with forced rainfall change, which also depends on thermodynamic scaling and event dynamics. We therefore treat historical process fidelity as a performance-weighting hypothesis rather than a formal emergent constraint. The hyperarid, event-dominated UAE provides a stringent setting in which to test whether current model ensembles contain such predictive information.
+P	The analysis addresses four questions. First, how consistently do 19 gauge sites resolve the UAE rainfall gradient, and do gauge-derived CHIRPS corrections transfer between stations? Second, how well do 21 CMIP6 models reproduce the ERA5-based UAE Rainfall Circulation Signature (URCS) without using simulated precipitation? Third, do process fidelity, historical extreme level, or present-day variability predict projected Rx1day and R95p changes under SSP5-8.5 after family-wise cross-validation, multiplicity control, and coupling tests? Finally, how sensitive are the projections to the downscaling product for five common parent models?
+H:Heading1	2. Data and methods
+H:Heading2	2.1 Study area and analytical framework
+P	The UAE occupies the south-eastern Arabian Peninsula (22.6–26.1°N, 51.5–56.5°E; Fig. 1), between the Arabian Gulf and the Gulf of Oman. Sand deserts dominate the west and south, whereas the Hajar Mountains along the eastern border reach approximately 1,900 m at Jebel Jais. Annual rainfall is generally below 120 mm yr−1, occurs predominantly from November to April, and is concentrated in a small number of synoptically driven events.
+P	Figure 1. Study area and gauge network. The map shows GADM v4.1 emirate boundaries, the Hajar Mountains, 15 National Center of Meteorology (NCM) monthly stations (2005–2014; five correction anchors marked by stars), the NCM Dubai daily reference station, and seven Global Summary of the Day (GSOD) airport stations (1991–2020).
+P	The analysis separates evidence by spatial support and function (Fig. 2). Gauge records establish the observed climatology and west–east gradient. Gauge-anchored CHIRPS provides climatological spatial completion, conditional on transferability between stations. ERA5 circulation and moisture fields define a precipitation-independent process reference for model evaluation, whereas downscaled CMIP6 products provide the future-change predictands. Cross-validation, false-discovery control, and construction-sensitivity tests determine which inferences are supported.
+P	Figure 2. Analytical framework. Gauge observations establish the rainfall climatology; CHIRPS provides spatial completion assessed by leave-one-station-out validation; ERA5 defines the URCS used to score 21 CMIP6 models independently of simulated precipitation; and downscaled projections enter cross-validated, multiplicity-controlled constraint tests.
+H:Heading2	2.2 Observations, gridded products, and climate simulations
+P	Gauge evidence came from three sources representing 19 distinct sites (Fig. 1). The NCM daily record at Dubai International Airport (1990–2020; mean 80.6 mm yr−1) served as the daily reference, and the NCM monthly network provided 15 stations across the western desert, interior, and Hajar Mountains for 2005–2014. Seven GSOD airport records from the Integrated Surface Database (Smith et al., 2011) supplied independent daily series for 1991–2020. Precipitation values below the missing-data code were retained, converted to millimetres, and shifted one day earlier to align with the local observing day; at Dubai, this adjustment increased the daily correlation with NCM from 0.17 to 0.54. GSOD underestimates the NCM reference by approximately 20 % at Dubai (46.9 versus 61.1 mm yr−1), and the Sharjah and Bateen records have additional siting and completeness limitations. These records were therefore used to confirm the gradient and evaluate gridded products, but not as correction anchors.
+P	The Climate Hazards InfraRed Precipitation with Station data (CHIRPS) v2 daily product (0.05°, 1981–2024; Funk et al., 2015) provided the gridded rainfall field. Among ten products evaluated against the Dubai record, CHIRPS was selected for its spatial resolution and suitability for station anchoring, not for superior raw daily skill. ERA5 monthly fields (0.25°, 1990–2020; Hersbach et al., 2020) comprised geopotential, wind, and specific humidity at 250, 500, 700, and 850 hPa, mean-sea-level pressure, total-column water vapour, and 10-m wind. MERRA-2 (Gelaro et al., 2017), JRA-55 (Kobayashi et al., 2015), and one Coordinated Regional Climate Downscaling Experiment (CORDEX) WAS-22 simulation were used for reference sensitivity and regional-model comparison.
+P	Historical monthly fields were obtained from 22 Coupled Model Intercomparison Project Phase 6 (CMIP6) models on their native grids for 1990–2014 (Eyring et al., 2016). Twenty-one models were scored after ACCESS-CM2 was excluded because of a time-coordinate fault (Supplementary Table S1). Projection predictands came from daily NEX-GDDP-CMIP6 precipitation (0.25°; Thrasher et al., 2022) for 15 models with both Process Fidelity Scores and SSP5-8.5 output; three additional runs were used only in the downscaling comparison. ISIMIP3b daily precipitation (0.5°; Lange, 2019) was analysed for five common parent models. One ensemble member was retained per model (r1i1p1f1 where available; r4i1p1f1 for CESM2), and native-grid cells were assigned to GADM v4.1 regions by point-in-polygon.
+P	Table 1 summarizes the datasets, variables, spatial support, analysis periods, and evidential role of each source. Model availability and exclusions are documented in Supplementary Table S1.
+P	Table 1. Data inventory and evidential roles.
+P	Dataset
+P	Role
+P	Variables
+P	Resolution / support
+P	Period
+P	NCM Dubai daily
+P	daily gauge reference
+P	precipitation
+P	station
+P	1990–2020
+P	NCM monthly network
+P	gradient evidence; correction anchors (5 of 15)
+P	precipitation
+P	15 stations
+P	2005–2014
+P	GSOD airports (ISD)
+P	independent daily gradient and product evaluation
+P	precipitation
+P	7 stations
+P	1991–2020
+P	CHIRPS v2
+P	gridded rainfall backbone
+P	daily precipitation
+P	0.05°
+P	1981–2024
+P	ERA5
+P	mechanism reference
+P	z, u, v, q (250–850 hPa); MSL; TCWV; 10-m wind
+P	monthly, 0.25°
+P	1990–2020
+P	MERRA-2, JRA-55
+P	reanalysis robustness
+P	upper-air fields as above
+P	monthly
+P	1990–2014
+P	CORDEX WAS-22
+P	dynamical downscaling reference
+P	upper-air fields
+P	0.22°
+P	historical
+P	CMIP6 (22 models)
+P	process-fidelity evaluation
+P	zg, ua, va, hus, psl
+P	native grids, monthly
+P	1990–2014
+P	NEX-GDDP-CMIP6
+P	projection predictands
+P	daily precipitation
+P	0.25°
+P	1990–2014; 2076–2100 (SSP5-8.5)
+P	ISIMIP3b
+P	downscaling comparison
+P	daily precipitation
+P	0.5°
+P	1990–2014; 2076–2100 (SSP5-8.5)
+P	GADM v4.1
+P	region masks
+P	admin. boundaries
+P	vector
+P	—
+H:Heading2	2.3 Rainfall indices, station-anchored correction, and correction validation
+P	Extreme-rainfall indices followed Expert Team on Climate Change Detection and Indices (ETCCDI) definitions (Zhang et al., 2011) using a 1 mm wet-day threshold: Rx1day, Rx5day, R95p, PRCPTOT, SDII, and R10mm. Gridded climatological indices were calculated annually at each cell for 1991–2020 and then averaged; R95p thresholds were estimated from each cell’s 1991–2020 wet-day distribution. At least 95 % of each index occurs during November–April, so trend analyses used explicit wet-season series.
+P	Station anchoring used a multiplicative gauge-to-CHIRPS factor at each anchor:
+P	where and are the 2005–2014 annual means at anchor station from the gauge and from the nearest 0.05° cell, giving Masafi 1.35, Jabal Jais 0.70, Dubai 0.61, Al Ain 1.28 and Zayed 0.52. The factor field is interpolated by inverse-distance weighting,
+P	with the great-circle-equivalent distance in degrees. An elevation-based correction is not supported by the anchors (factor–elevation correlation −0.01). Daily extremes at Dubai are additionally corrected by empirical quantile mapping of wet-day amounts,
+P	where denotes the empirical cumulative distribution of wet-day amounts over 1990–2020.
+P	Spatial transferability was tested by leave-one-station-out validation. Each anchor was withheld, its factor was interpolated from the remaining stations, and the predicted factor was compared with the observed gauge-to-grid ratio. The test was applied to both the five-anchor configuration and the full 15-station NCM network. Mean absolute error and station-rank correlation were compared with raw CHIRPS. Where transferability was unsupported, the corrected field was treated only as climatological spatial completion.
+H:Heading2	2.4 Trend estimation and sensitivity analysis
+P	Wet-season (November–April) regional-mean index series for 1982–2024 (43 seasons) were analysed using the Mann–Kendall trend test (Mann, 1945; Kendall, 1975), the Theil–Sen slope estimator (Theil, 1950; Sen, 1968), and the Hamed–Rao variance correction for serial correlation (Hamed and Rao, 1998); full definitions are provided in Supplementary Methods S1 (Eqs. S1–S5). Slopes are reported per decade as a percentage of the series mean, with Mann–Kendall-based 95 % confidence intervals. Rank-autocorrelation lags significant at the 5 % level were included in the variance adjustment. Benjamini–Hochberg control was applied across the 12 index–region tests at a 5 % false-discovery rate (Benjamini and Hochberg, 1995). Sensitivity was assessed by excluding 2024, and robustness by repeating the analysis with raw CHIRPS and the Dubai gauge record. The April 2024 storm was retained only as context for the magnitude of present-day variability.
+H:Heading2	2.5 Rainfall circulation signature and process-fidelity scoring
+P	The UAE Rainfall Circulation Signature (URCS) was defined from ERA5 as composite anomalies of 500-hPa geopotential height, integrated vapour transport (IVT), mean-sea-level pressure, and 850-hPa wind during the wettest tercile of wet-season months (62 of 186 months, 1990–2020). The leading wet-season 500-hPa geopotential-height empirical orthogonal function (EOF; 63.4 % of variance) provided a common basis for model evaluation. IVT was estimated by mass-weighted integration across four pressure levels (850–250 hPa),
+P	The IVT calculation was applied identically to ERA5 and each model, preserving comparability despite uncertainty in absolute magnitude. Complementary ERA5 diagnostics related standardised Dubai wet-season rainfall to total-column water vapour and 10-m wind and compared wet- and dry-season composites.
+P	Model fidelity was evaluated for 1990–2014 after bilinear regridding to the ERA5 grid. This period matches the CMIP6 historical experiment and is distinct from the 1991–2020 observational climatology. Spatial pattern fidelity was measured with the Taylor (2001) skill score
+P	with the spatial correlation and the normalised spatial standard deviation; IVT amplitude fidelity is
+P	IVT direction fidelity is the transport-weighted mean cosine between model and ERA5 vapour-flux vectors, rescaled to [0, 1],
+P	and is the uncentered congruence between the simulated wet-season Z500 anomaly pattern and the observed EOF1. The composite Process Fidelity Score is
+P	Component weights were fixed before examining projected changes and assigned 80 % of the total weight to the IVT terms. Sensitivity to weighting was assessed using equal and alternative weights, 10,000 Dirichlet perturbations, and correlations among components. The PFS characterises the climatological circulation and moisture background and its leading variability, not event-conditioned anomalies.
+H:Heading2	2.6 Constraint-testing protocol
+P	The projection predictand was the relative change in wet-season Rx1day and R95p,
+P	Changes were calculated under SSP5-8.5 on each product’s native grid for the UAE and eastern (Fujairah and Ras Al Khaimah) domains. The eastern NEX-GDDP domain contains six 0.25° cells. Regional R95p thresholds were fixed from the historical period. SSP5-8.5 was used to maximise the forced signal, and absolute changes were reported alongside percentages to limit distortion from small hyperarid baselines.
+P	Three pre-specified predictors—historical extreme level, present-day interannual variability, and PFS—were regressed against projected changes across 15 models. Model-family down-weighting accounted for shared development lineages (Knutti et al., 2017; Brunner et al., 2020),
+P	where is the number of ensemble members sharing model ’s development lineage (nine effective families). Out-of-sample performance uses the cross-validated skill
+P	Leave-one-family-out cross-validation, which withheld complete model lineages, was the primary out-of-sample test. A predictor was retained only if p < 0.05, cross-validated skill was positive, and bootstrap sign stability exceeded 0.9. Because PFS is an unsigned distance from the reference state and has no prescribed relationship with forced rainfall change, it was evaluated as a performance-weighting metric rather than a formal emergent constraint (Hall et al., 2019). Robustness tests comprised Benjamini–Hochberg control across 12 pre-specified and 44 expanded relationships; family jackknife, bootstrap, Spearman, and Kendall estimates; permutation tests for denominator coupling; and alternative predictands based on absolute change, future level, and log response ratio. Resampling the 25 seasons in each period estimated finite-period sampling uncertainty, not full initial-condition variability. The downscaling comparison used identical masks, periods, and index definitions for five parent models common to NEX-GDDP and ISIMIP3b.
+H:Heading1	3. Results
+H:Heading2	3.1 Wet-season climatology and the west–east rainfall gradient
+P	Rainfall at Dubai is concentrated in the November–April wet season. During 1990–2020, mean annual rainfall was 80.6 mm yr−1 and was dominated by a small number of wet days.
+P	All three gauge sources resolve a west–east rainfall gradient. NCM annual means increase from 33.1 mm yr−1 at Zayed International Airport to 113.1 mm yr−1 at Masafi, with 88.6 mm yr−1 at Jabal Jais. The independent GSOD records show the same ordering, from 40.6 mm at Abu Dhabi International and 48.4 mm at Dubai to 78.5 mm at Ras Al Khaimah and 89.2 mm at Fujairah. Their east/west ratios are 1.67 for annual rainfall and 2.06 for mean annual Rx1day. Across the 15-station NCM monthly network, annual rainfall spans 22.3–113.1 mm yr−1; all three mountain stations are wetter than the western-desert stations, and annual means correlate with longitude (r = 0.64) and elevation (r = 0.53). The gradient is therefore supported independently of the gridded field.
+P	None of the ten gridded products evaluated at Dubai achieved high daily skill (Fig. S1). CHIRPS was retained for its 0.05° resolution and suitability for station anchoring (Table 2). Quantile mapping increased Dubai Rx1day from 25.4 to 32.2 mm, compared with 29.1 mm observed, but daily event detection remained limited (POD = 0.43, FAR = 0.71, CSI = 0.21; monthly r = 0.83).
+P	The gauge-derived correction factors did not transfer reliably between stations. Five-anchor leave-one-station-out error was 63 %, compared with 50 % for raw CHIRPS, and station ranking was not recovered (Fig. 4d). With all 15 NCM stations, corrected and raw errors were 52 % and 53 %, while rank correlations were 0.36 and 0.37. Factors ranged from 0.27 to 1.96 and could reverse sign between neighbouring sites. Independent GSOD evaluation also showed large annual biases (−51 % to +78 %), weak station-order agreement (Spearman ρ = 0.14 raw; 0.29 corrected), and underestimation of Fujairah Rx1day (21.7 mm corrected versus 55.4 mm observed; Table 3). The corrected field is therefore used only for climatological spatial completion; the gradient is inferred primarily from gauges.
+P	Table 2. CHIRPS correction at the five NCM anchor stations. Factors above unity denote CHIRPS underestimation, whereas factors below unity denote overestimation. Anchor means refer to 2005–2014; corrected values equal gauge means by construction. Figure 4d evaluates transferability between anchors.
+P	Station (emirate)
+P	Elev. (m)
+P	NCM (mm yr⁻¹)
+P	Raw CHIRPS
+P	Correction factor
+P	Corrected
+P	Masafi (Fujairah)
+P	535
+P	113.1
+P	83.6
+P	1.35
+P	113.1
+P	Jabal Jais (Ras Al Khaimah)
+P	1810
+P	88.6
+P	125.9
+P	0.70
+P	88.6
+P	Dubai (central coast)
+P	19
+P	62.1
+P	101.9
+P	0.61
+P	62.1
+P	Al Ain (inland east)
+P	265
+P	54.3
+P	42.4
+P	1.28
+P	54.3
+P	Zayed (Abu Dhabi coast)
+P	27
+P	33.1
+P	63.9
+P	0.52
+P	33.1
+P	Table 3. Daily CHIRPS evaluation against seven GSOD airport records, 1991–2020. Records were shifted by one day to account for the reporting offset validated at Dubai (r = 0.54 after alignment). Bias is expressed relative to each station mean; event metrics use a 1 mm wet-day threshold. Rx1day is the mean annual daily maximum. GSOD undercatch at Dubai and the siting/completeness limitations at Sharjah and Bateen should be considered when interpreting absolute amounts.
+P	Station
+P	Obs (mm yr⁻¹)
+P	Raw bias (%)
+P	Corr. bias (%)
+P	r (daily)
+P	CSI
+P	Obs Rx1day (mm)
+P	Corr. Rx1day (mm)
+P	Fujairah Intl
+P	89.2
+P	-35
+P	-21
+P	0.08
+P	0.16
+P	55.4
+P	21.7
+P	Ras Al Khaimah Intl
+P	78.5
+P	+4
+P	+6
+P	0.16
+P	0.13
+P	33.3
+P	21.2
+P	Sharjah Intl
+P	107.9
+P	-31
+P	-54
+P	0.05
+P	0.11
+P	50.8
+P	16.1
+P	Dubai Intl
+P	48.4
+P	+78
+P	+8
+P	0.38
+P	0.15
+P	22.3
+P	13.8
+P	Al Ain Intl
+P	46.5
+P	-10
+P	+15
+P	0.06
+P	0.10
+P	22.9
+P	15.1
+P	Abu Dhabi Intl
+P	40.6
+P	+46
+P	-25
+P	0.07
+P	0.10
+P	25.1
+P	9.8
+P	Bateen (Abu Dhabi)
+P	61.6
+P	-51
+P	-73
+P	0.04
+P	0.06
+P	17.1
+P	5.9
+P	Station-corrected CHIRPS preserves the gauge-supported eastward increase across all six indices (Fig. 3; Table 4). Rx1day rises from 11.6 mm in Abu Dhabi to 25.4 mm in Fujairah, and the emirate ordering is similar for Rx5day, R95p, PRCPTOT, SDII, and R10mm. Raw CHIRPS shows the same direction but a weaker gradient (east/west ratios 1.05–1.14), confirming that the corrected amplitude is controlled largely by the gauge anchors.
+P	Figure 3. Mean wet-season extreme-rainfall indices from station-corrected CHIRPS, 1991–2020: (a) Rx1day, (b) Rx5day, (c) R95p, (d) PRCPTOT, (e) SDII, and (f) R10mm. Coloured points identify NCM anchors; ocean cells are masked. Values generally increase toward the Hajar-exposed eastern emirates.
+P	Table 4. Extreme-rainfall indices by emirate (station-corrected CHIRPS, 1991–2020; calendar-year indices, wet-season dominated), ranked by Rx1day. The final row gives the east (Fujairah / Ras Al Khaimah / Sharjah) versus west (Abu Dhabi / Dubai / Ajman / Umm al-Qaywayn) ratio of the emirate means. The daily-intensity index SDII (not shown per emirate) gives an east/west ratio of 1.28.
+P	Emirate
+P	Region
+P	Rx1day (mm)
+P	Rx5day (mm)
+P	R95p (mm)
+P	PRCPTOT (mm)
+P	R10mm (d)
+P	Fujairah
+P	E mountain
+P	25.4
+P	35.5
+P	20.5
+P	99.0
+P	2.94
+P	Ras Al Khaimah
+P	N mountain
+P	23.4
+P	32.4
+P	19.4
+P	91.7
+P	2.54
+P	Umm al-Qaywayn
+P	N coast
+P	21.5
+P	30.2
+P	17.7
+P	84.8
+P	2.25
+P	Sharjah
+P	transitional
+P	19.9
+P	27.4
+P	15.6
+P	75.5
+P	1.95
+P	Ajman
+P	N coast
+P	18.6
+P	26.1
+P	15.0
+P	72.2
+P	1.84
+P	Dubai
+P	central coast
+P	17.5
+P	23.5
+P	14.6
+P	68.3
+P	1.44
+P	Abu Dhabi
+P	W desert
+P	11.6
+P	15.9
+P	8.1
+P	42.2
+P	0.69
+P	East / West ratio
+P	—
+P	1.32
+P	1.33
+P	1.33
+P	1.33
+P	1.59
+P	Corrected-field east/west ratios are 1.32 for Rx1day, 1.33 for Rx5day, R95p, and PRCPTOT, 1.28 for SDII, and 1.59 for R10mm (Fig. 4). The stronger R10mm contrast indicates greater spatial differentiation in heavy-rain frequency than in mean wet-day intensity. Because leave-one-station-out validation does not support transferability, these values are gauge-anchored estimates bounded by the weaker raw-CHIRPS ratios.
+P	Figure 4. West–east rainfall gradient and correction transferability. (a) Corrected CHIRPS emirate means normalised by the national mean. (b) East/west ratios from corrected and raw CHIRPS. (c) GSOD airport estimates (annual rainfall ratio = 1.67; Rx1day ratio = 2.06; Sharjah and Al Ain excluded). (d) Five-anchor leave-one-station-out error for corrected (63 %) and raw (50 %) CHIRPS.
+H:Heading2	3.2 Wet-season circulation and moisture transport
+P	The wettest-tercile ERA5 composite (62 of 186 wet-season months, 1990–2020) defines the URCS (Fig. 5). A negative 500-hPa geopotential-height anomaly lies north-west of the UAE, while anomalous IVT extends from the Arabian Sea and Gulf of Oman toward the country beneath a weak surface-pressure anomaly. The transport pathway reaches the eastern and northern emirates and intersects the Hajar Mountains.
+P	The leading wet-season 500-hPa geopotential-height EOF explains 63.4 % of variance and captures the trough–ridge structure used as the model-evaluation reference.
+P	Figure 5. ERA5 UAE Rainfall Circulation Signature, November–April 1990–2020, composited for the 62 wettest months. (a) 500-hPa height anomaly and 850-hPa wind; (b) IVT anomaly; (c) mean-sea-level-pressure anomaly; (d) leading 500-hPa height EOF (63.4 % of variance); and (e,f) UAE-scale moisture-transport and low-level-flow fields. Stippling denotes p < 0.05; the red outline denotes the UAE boundary.
+P	Independent ERA5 diagnostics reproduce the same moisture pathway. Both regression on standardised Dubai wet-season rainfall and wet-minus-dry composites show positive total-column water-vapour anomalies over the Arabian Sea and Gulf of Oman, with anomalous onshore low-level flow toward the UAE (Fig. 6a,b).
+P	Figure 6. Complementary ERA5 moisture diagnostics, November–April 1990–2020. (a) TCWV and 10-m wind regressed on standardised Dubai rainfall; (b) wet-minus-dry composite; (c,d) leading interannual TCWV EOF (70.3 % of variance) and its principal component relative to Dubai rainfall (r = 0.38); and (e,f) leading monthly TCWV EOF (58.6 %) and its principal component relative to Gulf-of-Oman TCWV (r = 0.87). The red outline denotes the UAE boundary.
+P	The leading interannual wet-season TCWV EOF explains 70.3 % of variance and is centred over the Arabian Sea and Gulf of Oman. Its principal component correlates with Dubai wet-season rainfall (r = 0.38; Fig. 6c,d). At monthly resolution, the leading TCWV mode correlates more strongly with Gulf-of-Oman moisture variability (r = 0.87). These modes identify the large-scale moisture variability associated with UAE wet seasons.
+H:Heading2	3.3 Interannual variability and temporal trends
+P	Wet-season rainfall is highly variable from year to year. The April 2024 storm—approximately 144 mm at Dubai and a national daily maximum of approximately 259.5 mm—illustrates the magnitude of that variability but is not treated as trend evidence.
+P	No index shows a statistically significant 1982–2024 trend at p < 0.05 in either the UAE-wide or eastern domain (Table 5; Fig. 7). UAE-wide tendencies are negative for Rx1day (−9 % decade−1, 95 % CI −22 to +2, p = 0.12) and R95p (−14 % decade−1, CI −45 to +3, p = 0.18), whereas eastern-domain changes are weak (Rx1day p = 0.60; R95p p = 0.76). Excluding 2024 produces nominal decreases in UAE-wide Rx1day (−12 % decade−1, p = 0.042) and SDII (−9 % decade−1, p = 0.022); autocorrelation adjustment also gives p = 0.018 for full-record SDII. None survives false-discovery control (minimum q = 0.72). Raw-CHIRPS slopes are similar, and the Dubai gauge shows a consistent but non-significant Rx1day decrease (−13 % decade−1, p = 0.37).
+P	Two nominal UAE-wide results change significance when the 2024 endpoint is removed. The record therefore supports only weak, endpoint-sensitive drying tendencies, not a robust monotonic trend. The spatial gradient and interannual variability are more consistently resolved.
+P	Figure 7. Wet-season extreme-rainfall trends, 1982–2024. (a,b) UAE-wide and eastern Rx1day anomalies with Theil–Sen estimates and 95 % intervals; (c) slopes for 12 index–region combinations, with red diamonds excluding 2024; and (d) raw p-values and Benjamini–Hochberg q-values. No test reaches q < 0.05 (minimum q = 0.72).
+P	Table 5. Wet-season (November–April) extreme-rainfall trends, station-corrected CHIRPS, 1982–2024 (43 seasons). Theil–Sen slope (per decade, as a percentage of the series mean) with its Mann–Kendall-based 95 % confidence interval; two-sided Mann–Kendall p for the full record, with the 2024 season excluded, and with the Hamed–Rao autocorrelation correction. Bold p-values are below 0.05. No eastern-domain trend is significant in any configuration; raw-CHIRPS slopes are nearly identical, and no cell attains Benjamini–Hochberg q < 0.05 (Section 3.3).
+P	Region
+P	Index
+P	Sen slope (% dec⁻¹)
+P	95 % CI
+P	p (MK)
+P	p (excl. 2024)
+P	p (autocorr-corr.)
+P	UAE-wide
+P	Rx1day
+P	-9.1
+P	[-22, 2]
+P	0.12
+P	0.042
+P	0.121
+P	UAE-wide
+P	Rx5day
+P	-5.5
+P	[-16, 5]
+P	0.35
+P	0.165
+P	0.346
+P	UAE-wide
+P	R95p
+P	-14.5
+P	[-45, 3]
+P	0.18
+P	0.065
+P	0.180
+P	UAE-wide
+P	PRCPTOT
+P	-3.5
+P	[-13, 6]
+P	0.56
+P	0.288
+P	0.558
+P	UAE-wide
+P	SDII
+P	-6.7
+P	[-13, 0]
+P	0.07
+P	0.022
+P	0.018
+P	UAE-wide
+P	R10mm
+P	-10.1
+P	[-31, 8]
+P	0.34
+P	0.156
+P	0.204
+P	Eastern (Fuj./RAK)
+P	Rx1day
+P	-2.6
+P	[-16, 10]
+P	0.60
+P	0.329
+P	0.426
+P	Eastern (Fuj./RAK)
+P	Rx5day
+P	+0.6
+P	[-13, 13]
+P	0.93
+P	0.762
+P	0.909
+P	Eastern (Fuj./RAK)
+P	R95p
+P	-0.7
+P	[-25, 9]
+P	0.76
+P	0.440
+P	0.625
+P	Eastern (Fuj./RAK)
+P	PRCPTOT
+P	+1.1
+P	[-10, 11]
+P	0.87
+P	0.795
+P	0.867
+P	Eastern (Fuj./RAK)
+P	SDII
+P	-1.6
+P	[-12, 6]
+P	0.72
+P	0.410
+P	0.567
+P	Eastern (Fuj./RAK)
+P	R10mm
+P	+0.4
+P	[-16, 20]
+P	0.98
+P	0.680
+P	0.976
+H:Heading2	3.4 CMIP6 representation of circulation and moisture transport
+P	The precipitation-independent PFS was evaluated for 21 CMIP6 models, two reanalyses, and one regional simulation. Downscaled products inherited the score of their parent model; the relationship between historical PFS and projected rainfall change was tested separately.
+P	CMIP6 PFS values span 0.51–0.99 (median 0.88; Table 6; Fig. 8a), with most of the spread arising from IVT amplitude fidelity. CESM2-family models and MIROC6 rank highest (0.97–0.99), whereas CanESM5 ranks lowest (0.51; IVT skill = 0.35) and IPSL-CM6A-LR scores 0.72. Equal weighting compresses the score range to 0.85–0.98, but the model ordering changes little. Across four weighting schemes and 10,000 random perturbations, rank correlations remain 0.88–1.00; CanESM5 remains last and CESM2 remains within the top three.
+P	EC-Earth3 scores 0.80 because of weak IVT amplitude, showing that finer horizontal resolution does not ensure higher fidelity to the evaluated process. Related model families cluster in the ranking, supporting lineage-based down-weighting. Most models reproduce the IVT spatial pattern (correlations 0.90–0.99) but differ substantially in normalised amplitude (Fig. 8b).
+P	Table 6. CMIP6 Process Fidelity Scores relative to ERA5 for 21 models. S_IVT denotes IVT-magnitude Taylor skill and IVT direction denotes the transport-weighted vector-direction cosine. The adopted PFS assigns 80 % of its weight to moisture-transport terms.
+P	Rank
+P	Model
+P	Family
+P	S_IVT
+P	A_IVT
+P	IVT dir.
+P	S_Z500
+P	S_MSL
+P	CBF
+P	PFS
+P	1
+P	CESM2
+P	CESM
+P	0.98
+P	0.99
+P	0.99
+P	0.98
+P	0.98
+P	0.96
+P	0.985
+P	2
+P	MIROC6
+P	MIROC
+P	0.95
+P	0.99
+P	0.97
+P	0.99
+P	0.95
+P	0.99
+P	0.973
+P	3
+P	CESM2-WACCM
+P	CESM
+P	0.98
+P	0.93
+P	0.99
+P	0.99
+P	0.98
+P	0.97
+P	0.968
+P	4
+P	BCC-ESM1
+P	BCC
+P	0.97
+P	0.93
+P	0.97
+P	0.96
+P	0.94
+P	0.98
+P	0.958
+P	5
+P	CESM2-FV2
+P	CESM
+P	0.97
+P	0.90
+P	0.97
+P	0.99
+P	0.97
+P	0.96
+P	0.955
+P	6
+P	TaiESM1
+P	CESM
+P	0.95
+P	0.84
+P	0.99
+P	0.98
+P	0.95
+P	0.96
+P	0.935
+P	7
+P	NorESM2-MM
+P	CESM
+P	0.94
+P	0.79
+P	0.99
+P	1.00
+P	0.99
+P	0.97
+P	0.924
+P	8
+P	NorESM2-LM
+P	CESM
+P	0.94
+P	0.81
+P	0.97
+P	0.99
+P	0.97
+P	0.97
+P	0.922
+P	9
+P	FGOALS-f3-L
+P	FGOALS
+P	0.94
+P	0.79
+P	0.98
+P	0.99
+P	0.98
+P	0.96
+P	0.916
+P	10
+P	GFDL-CM4
+P	GFDL
+P	0.94
+P	0.78
+P	0.98
+P	0.95
+P	0.95
+P	0.99
+P	0.910
+P	11
+P	INM-CM5-0
+P	INM
+P	0.88
+P	0.75
+P	0.98
+P	0.99
+P	0.85
+P	0.93
+P	0.879
+P	12
+P	AWI-ESM-1-1-LR
+P	AWI
+P	0.87
+P	0.71
+P	0.99
+P	0.98
+P	0.95
+P	0.96
+P	0.876
+P	13
+P	MPI-ESM1-2-HR
+P	MPI
+P	0.89
+P	0.69
+P	0.98
+P	1.00
+P	0.98
+P	0.97
+P	0.876
+P	14
+P	MPI-ESM1-2-LR
+P	MPI
+P	0.88
+P	0.69
+P	0.99
+P	0.99
+P	0.98
+P	0.97
+P	0.875
+P	15
+P	MRI-ESM2-0
+P	MRI
+P	0.88
+P	0.68
+P	0.94
+P	0.96
+P	0.98
+P	0.98
+P	0.859
+P	16
+P	MPI-ESM-1-2-HAM
+P	MPI
+P	0.84
+P	0.62
+P	0.99
+P	0.96
+P	0.98
+P	0.97
+P	0.841
+P	17
+P	INM-CM4-8
+P	INM
+P	0.81
+P	0.67
+P	0.96
+P	0.99
+P	0.79
+P	0.95
+P	0.833
+P	18
+P	FGOALS-g3
+P	FGOALS
+P	0.83
+P	0.63
+P	0.91
+P	0.98
+P	0.97
+P	0.97
+P	0.827
+P	19
+P	EC-Earth3
+P	EC-Earth
+P	0.79
+P	0.52
+P	0.99
+P	1.00
+P	0.99
+P	0.98
+P	0.802
+P	20
+P	IPSL-CM6A-LR
+P	IPSL
+P	0.66
+P	0.37
+P	0.98
+P	0.99
+P	0.97
+P	0.97
+P	0.715
+P	21
+P	CanESM5
+P	CanESM
+P	0.35
+P	0.00
+P	0.98
+P	1.00
+P	0.89
+P	0.97
+P	0.512
+P	Figure 8. Precipitation-independent process evaluation for 1990–2014. (a) PFS and weighted components for 21 CMIP6 models, MERRA-2, JRA-55, and CORDEX WAS-22; (b) normalised standard deviation and spatial correlation for IVT and 500-hPa height; and (c) model-rank intervals from 10,000 Dirichlet weight perturbations.
+H:Heading2	3.5 Reanalysis consistency, regional downscaling, and inherited process fidelity
+P	MERRA-2 and JRA-55 yield PFS values of 0.98 and 0.92, with IVT pattern skills of 0.99 and 0.94, respectively (Table 7; Fig. 8). Their agreement with ERA5 indicates that the Arabian Sea–Gulf of Oman transport pattern is consistent across reanalyses. The broader CMIP6 range (0.51–0.99) therefore reflects model differences more than reference-product spread, although agreement among reanalyses does not establish observational certainty.
+P	The CORDEX WAS-22 simulation scores 0.85, near the middle of the CMIP6 distribution. This single CMIP5-driven realisation reproduces the broad circulation and moisture-transport structure but does not outperform the highest-scoring global models; it is retained only as a dynamical reference.
+P	NEX-GDDP-CMIP6 and ISIMIP3b provide bias-adjusted daily precipitation but no independent upper-air fields, so each product inherits the PFS of its parent model (Table 7). The five ISIMIP3b parents include GFDL-ESM4, IPSL-CM6A-LR (0.72), MPI-ESM1-2-HR (0.88), MRI-ESM2-0 (0.86), and UKESM1-0-LL. Parent-model scores for the 15 NEX-GDDP members span 0.51–0.99. Statistical downscaling changes local precipitation distributions but does not add atmospheric-process information.
+P	Table 7. Process-fidelity evaluation of non-CMIP6 datasets. MERRA-2, JRA-55, and CORDEX WAS-22 are scored directly relative to ERA5. Downscaled precipitation products lack upper-air fields and therefore inherit the PFS of their CMIP6 parent. A dash denotes an unscored parent.
+P	Dataset / product
+P	Class
+P	PFS
+P	Rank
+P	MERRA2
+P	Reanalysis
+P	0.98
+P	2
+P	JRA55
+P	Reanalysis
+P	0.92
+P	10
+P	CORDEX WAS-22 (NCC-NorESM1-M; COSMO-crCLIM)
+P	Regional climate model (CMIP5-driven)
+P	0.85
+P	18
+P	NEX-GDDP-CMIP6 (15 members)
+P	Statistically downscaled (BCSD)
+P	0.51–0.99 (inherited)
+P	—
+P	ISIMIP3b (5 members)
+P	Bias-adjusted (W5E5); parents below
+P	inherited
+P	—
+P	GFDL-ESM4
+P	ISIMIP3b parent
+P	— (not scored)
+P	—
+P	IPSL-CM6A-LR
+P	ISIMIP3b parent
+P	0.72
+P	20
+P	MPI-ESM1-2-HR
+P	ISIMIP3b parent
+P	0.88
+P	13
+P	MRI-ESM2-0
+P	ISIMIP3b parent
+P	0.86
+P	15
+P	UKESM1-0-LL
+P	ISIMIP3b parent
+P	— (not scored)
+P	—
+H:Heading2	3.6 Relationship between process fidelity and projected rainfall change
+P	Historical PFS was tested against SSP5-8.5 changes in wet-season Rx1day and R95p for 2076–2100 relative to 1990–2014. The analysis used 15 models for the UAE and eastern domains; the latter comprises six NEX-GDDP grid cells. Because PFS is an unsigned distance from the reference state, the test evaluates performance weighting rather than a formal emergent constraint.
+P	PFS provides no predictive skill for any index–region combination (Table 8; Fig. 9). Family-weighted correlations are small (|r| ≤ 0.15, p ≥ 0.61), leave-one-model-out skill is negative (−0.22 to −0.53), and leave-one-family-out skill is lower (−0.50 to −1.02). Weighting changes ensemble spread by −14 % to +4 %, less than the bootstrap uncertainty in spread (95 % interval half-width = 24–47 %). At n = 15, correlation intervals remain wide; for PFS versus UAE Rx1day, r = −0.03 (95 % CI −0.53 to +0.49). Strong predictive relationships are therefore excluded, but weak relationships remain unresolved.
+P	Table 8. Relationship between PFS and projected rainfall change for 15 models under SSP5-8.5 (2076–2100 relative to 1990–2014). Negative leave-one-model-out skill indicates no improvement over the ensemble mean; leave-one-family-out results, the primary validation test, are reported in the text.
+P	Index
+P	Region
+P	Pearson r
+P	p-value
+P	LOO skill
+P	Ensemble Δ (%)
+P	Rx1day
+P	UAE-wide
+P	−0.03
+P	0.93
+P	−0.42
+P	+7.4 ± 29.4
+P	R95p
+P	UAE-wide
+P	−0.03
+P	0.91
+P	−0.22
+P	+37.7 ± 79.7
+P	Rx1day
+P	Eastern (Fuj. / RAK)
+P	−0.01
+P	0.97
+P	−0.53
+P	+3.5 ± 25.9
+P	R95p
+P	Eastern (Fuj. / RAK)
+P	−0.15
+P	0.61
+P	−0.39
+P	+22.5 ± 62.3
+P	Projected changes are wide and cross zero. UAE Rx1day ranges from −35 % in EC-Earth3 to +62 % in CESM2, while two high-fidelity models disagree in sign (CESM2 +62 %; MIROC6 −12 %). Ensemble-mean absolute changes are +0.7 mm from a 13.9 mm Rx1day baseline and +3.7 mm from a 12.1 mm R95p baseline. No more than nine of 15 models agree on the sign of change (binomial p ≥ 0.61).
+P	Finite-period uncertainty is large relative to the projected signal. Resampling the 25 wet seasons in each period places zero within the 95 % interval for 73 % of model–index–region combinations (Fig. 9e). Sampling variability accounts for 38 % and 37 % of the UAE and eastern Rx1day spread and 44 % and 48 % of the corresponding R95p spread. Because only one realisation is available per model, these fractions are lower bounds on unforced variability (Fig. S2).
+P	Candidate-predictor tests identify no robust relationship (Table 9). Historical Rx1day versus percentage change is the sole nominal result (r = −0.58, p = 0.022; leave-one-model-out skill = 0.024), but the historical value also appears in the predictand denominator. Permuting future values reproduces the correlation (median r = −0.58; 95 % range −0.82 to −0.20; coupling probability = 0.49), whereas future Rx1day level is unrelated to the historical level (r = 0.03, p = 0.90). The association fails false-discovery control (q = 0.20), becomes non-significant after removal of the CESM family (p = 0.13), and is absent for R95p and the eastern domain. No PFS weighting scheme yields |r| > 0.33.
+P	Table 9. Candidate predictors of projected rainfall change for 15 models under SSP5-8.5. Predictors are historical extreme level (P1), interannual variability (P2), and PFS (P3). Retention requires p < 0.05, positive leave-one-model-out skill, and bootstrap sign stability >0.9. The only nominal P1 association fails false-discovery and coupling tests; PFS fails in all four index–region combinations.
+P	Predictor
+P	Index
+P	Region
+P	r
+P	p
+P	LOO
+P	Survives
+P	P1 Historical level
+P	Rx1day
+P	UAE-wide
+P	−0.58
+P	0.022
+P	+0.024
+P	Marginal
+P	P2 Present-day var.
+P	Rx1day
+P	UAE-wide
+P	−0.24
+P	0.382
+P	−0.08
+P	No
+P	P3 Process fidelity (PFS)
+P	Rx1day
+P	UAE-wide
+P	−0.03
+P	0.930
+P	−0.42
+P	No
+P	P1 Historical level
+P	R95p
+P	UAE-wide
+P	−0.55
+P	0.033
+P	−0.11
+P	No
+P	P2 Present-day var.
+P	R95p
+P	UAE-wide
+P	−0.24
+P	0.396
+P	−0.07
+P	No
+P	P3 Process fidelity (PFS)
+P	R95p
+P	UAE-wide
+P	−0.03
+P	0.908
+P	−0.22
+P	No
+P	P1 Historical level
+P	Rx1day
+P	Eastern
+P	−0.39
+P	0.152
+P	−0.13
+P	No
+P	P2 Present-day var.
+P	Rx1day
+P	Eastern
+P	−0.03
+P	0.911
+P	−0.16
+P	No
+P	P3 Process fidelity (PFS)
+P	Rx1day
+P	Eastern
+P	−0.01
+P	0.968
+P	−0.53
+P	No
+P	P1 Historical level
+P	R95p
+P	Eastern
+P	−0.24
+P	0.382
+P	−0.25
+P	No
+P	P2 Present-day var.
+P	R95p
+P	Eastern
+P	+0.24
+P	0.397
+P	−0.15
+P	No
+P	P3 Process fidelity (PFS)
+P	R95p
+P	Eastern
+P	−0.15
+P	0.606
+P	−0.39
+P	No
+P	Figure 9. PFS and projected rainfall change for 15 models under SSP5-8.5. (a–d) Family-weighted relationships for two indices and two regions; annotations give r, p, and leave-one-model-out skill. (e) Per-model changes with 95 % finite-period resampling intervals; zero is included in 73 % of model–index–region combinations.
+P	Figure 10. Robustness tests for the absence of a detectable constraint. (a) Permutation evidence for denominator coupling; (b) family-deletion correlations; (c) projected sign agreement; and (d,e) correlations and Benjamini–Hochberg q-values across 44 tests. No test reaches q < 0.05 (minimum q = 0.66).
+P	Testing the PFS components separately produces the same result. IVT pattern, amplitude, direction, raw correlation, amplitude ratio, Z500 and MSL skills, and EOF congruence all fail the retention criteria in every index–region combination (Fig. 10d,e). The minimum Benjamini–Hochberg q-value across 44 tests is 0.66.
+P	Projection magnitude also depends strongly on the downscaling product. Across the full ensembles, UAE Rx1day change ranges from −35 % to +62 % in NEX-GDDP and from −13 % to +131 % in ISIMIP3b. For five common parent models analysed with identical masks, periods, and index definitions, NEX-GDDP changes are 12–110 percentage points smaller in all ten parent–index comparisons, and four comparisons differ in sign (Fig. 11). Matched-parent Rx1day ranges are −25 % to +75 % in NEX-GDDP and −13 % to +131 % in ISIMIP3b. The bias-adjustment and downscaling workflow therefore contributes substantial projection uncertainty.
+P	Figure 11. Matched-parent downscaling comparison for UAE wet-season Rx1day and R95p under SSP5-8.5 (2076–2100 relative to 1990–2014). (a) NEX-GDDP and ISIMIP3b changes for five common parent models; (b) spread across the same five parents. Four of ten parent–index comparisons differ in sign.
+P	Taken together, cross-validation, multiplicity control, coupling tests, family-dependence analysis, resampling, and the matched-parent comparison provide no evidence that the evaluated historical metrics constrain projected UAE rainfall extremes.
+H:Heading1	4. Discussion
+P	The study resolves a clear asymmetry between present-day spatial evidence and future-change uncertainty. Three gauge sources consistently identify stronger rainfall extremes toward the eastern mountains, and ERA5 links this gradient to moisture transport from the Arabian Sea and Gulf of Oman. Climate models reproduce that large-scale background with widely varying fidelity, but the fidelity differences contain no detectable information about projected national-scale change. The spatial organisation of current rainfall hazard is therefore better established than the direction or magnitude of future change.
+H:Heading2	4.1 Spatial rainfall gradient and physical controls
+P	Agreement among three gauge sources indicates that the west–east gradient is observational rather than an artefact of one network or gridded product. GSOD east/west ratios reach 1.67 for annual rainfall and 2.06 for Rx1day, and every NCM mountain station is wetter than the western-desert stations. The URCS provides a consistent physical context: a mid-tropospheric trough north-west of the UAE accompanies transport from the Arabian Sea and Gulf of Oman toward the eastern and northern emirates, where the pathway intersects the Hajar Mountains (Figs. 3–6). This configuration accords with analyses of severe UAE rainfall, including April 2024 (Francis et al., 2025), and with projected changes in Arabian Peninsula moisture transport (Pathak et al., 2025). Moisture availability and orographic exposure are therefore plausible controls on the gradient, although the analysis does not attribute individual events.
+P	The gridded-product tests qualify the spatial detail that can be inferred between gauges. CHIRPS correction factors are not transferable: leave-one-station-out performance is no better than raw CHIRPS in either the five- or 15-anchor configuration, local factors range from 0.27 to 1.96, and corrected Fujairah Rx1day remains well below the observed value (21.7 versus 55.4 mm). Local agreement at calibration sites can therefore coexist with large errors elsewhere in heterogeneous hyperarid terrain. The gauge networks establish the direction of the gradient; CHIRPS supplies only climatological spatial completion. This distinction extends the UAE evaluation of Baig et al. (2022) by separating calibration accuracy from spatial transferability.
+H:Heading2	4.2 Interannual variability and trend detectability
+P	The 1982–2024 record does not support a robust monotonic change in the evaluated indices (Fig. 7; Table 5). Nominal slopes depend on the 2024 endpoint and the treatment of autocorrelation, and none survives false-discovery control. Such sensitivity is expected in an event-dominated hydroclimate, where a few storms can alter short-period trend estimates. The April 2024 storm documents the magnitude of present rainfall hazard but is not, by itself, evidence of long-term change. Conversely, the absence of a significant trend does not establish climatic stability or contradict projected regional intensification (Pathak et al., 2025). The persistent spatial gradient and large interannual variability are more firmly resolved than a monotonic historical trend.
+P	Endpoint tests, autocorrelation adjustment, and multiplicity control are therefore essential for regional extreme-index analyses. A nominal result that appears or disappears with one exceptional season is insufficient evidence of a sustained climatic tendency. Stronger trend inference will require longer, homogenised daily station records and explicit assessment of event influence.
+H:Heading2	4.3 Historical process fidelity across model systems
+P	Agreement among MERRA-2, JRA-55, and ERA5 indicates that the URCS moisture-transport pattern is not unique to one assimilation system, although reanalysis agreement does not establish observational certainty. Against this reference, CMIP6 differences arise mainly from IVT amplitude rather than spatial pattern. The mid-range CORDEX WAS-22 score and the weak performance of one comparatively high-resolution global model further show that resolution alone does not ensure process fidelity (Fig. 8; Tables 6 and 7). NEX-GDDP-CMIP6 and ISIMIP3b cannot independently resolve this deficiency because they modify surface precipitation while inheriting the large-scale dynamics of their parent models.
+P	The PFS nevertheless measures a restricted aspect of model behaviour. It characterises the climatological circulation and moisture background and its leading mode of variability, not the occurrence, persistence, or precipitation efficiency of individual storms. A high score therefore indicates fidelity to the large-scale setting rather than demonstrated skill in daily extremes. This distinction is essential when using process realism to rank models or weight projections.
+H:Heading2	4.4 Historical fidelity and projected rainfall change
+P	The central projection result is the absence of a validated historical-to-future relationship. Neither PFS, historical extreme magnitude, nor present-day variability predicts Rx1day or R95p change under the pre-specified tests (Figs. 9 and 10; Tables 8 and 9). Present-day variability, which constrains extratropical projections in other settings (Zhang et al., 2022), provides no out-of-sample skill for the UAE. The only nominal association arises because the historical value appears in both the predictor and the denominator of percentage change; permutation and alternative-predictand tests identify the relationship as mathematical rather than physical. Historical-to-relative-change analyses therefore require explicit coupling diagnostics before being interpreted as emergent constraints.
+P	This null result is consistent with the construction of PFS. An unsigned distance from a present-day reference state has no prescribed relationship with forced change, which also depends on thermodynamic moisture increases and event-scale dynamics. A defensible emergent constraint requires a specified physical link and out-of-sample validation (Hall et al., 2019); the present PFS satisfies neither condition. The analysis therefore shows that the tested metrics contain no detectable predictive information in the available ensemble. It does not exclude weaker relationships or constraints based on event-conditioned diagnostics.
+H:Heading2	4.5 Internal variability and downscaling uncertainty
+P	The signal-to-noise structure limits the power of the constraint test. Finite-period sampling accounts for 37–48 % of inter-model spread, and zero lies within the resampled interval for 73 % of model–index–region combinations (Fig. S2). These estimates are lower bounds because only one realisation is available per model. The effective sample also contains only nine model families. Much of the apparent cross-model spread is therefore unforced variability rather than a stable forced response.
+P	Matched-parent comparisons reveal additional uncertainty after the global model simulation. NEX-GDDP changes are 12–110 percentage points smaller than ISIMIP3b changes across ten parent–index comparisons, and four comparisons reverse sign (Fig. 11). Projection spread therefore combines global model structure, internal variability, and the bias-adjustment and downscaling workflow. Ranking parent models by circulation fidelity cannot remove uncertainty introduced at later processing stages. Regional assessments should report matched-parent and multi-product sensitivity rather than treat one downscaled archive as a unique representation of the parent response.
+H:Heading2	4.6 Implications for UAE climate-risk assessment
+P	The findings support different treatments of present hazard and future change. The gauge gradient and its moisture-transport context justify greater attention to the eastern and northern emirates in spatial rainfall-hazard assessment. By contrast, PFS does not support narrowing the projected range through model selection. Risk assessments should retain the product-dependent, zero-crossing spread, account for model interdependence, and use physical storylines to explore plausible outcomes rather than assign unsupported precision (Knutti et al., 2017; Shepherd et al., 2018). The modest ensemble-mean absolute change does not imply modest risk, because impacts are concentrated in the upper tail and a single storm can be highly disruptive. Communication should distinguish robust evidence for the present spatial gradient from the unresolved direction and magnitude of long-term change.
+H:Heading2	4.7 Limitations and research priorities
+P	Several observational and spatial limitations define the scope of the conclusions. Gauge undercatch, station siting, and differences in record completeness affect the absolute rainfall amounts derived from the observational networks, while the poor transferability of CHIRPS correction factors limits confidence in estimates between gauge locations. The corrected field should therefore be interpreted as climatological spatial completion rather than as an independently validated station-scale product. Spatial support is also coarse in the eastern NEX-GDDP-CMIP6 domain, which contains only six 0.25° grid cells and therefore cannot fully resolve rainfall contrasts associated with the Hajar Mountains and eastern coastal terrain.
+P	The atmospheric-process and projection analyses are similarly bounded by data resolution and ensemble design. The Process Fidelity Score was calculated from monthly fields, and integrated vapour transport was approximated from four pressure levels; consequently, the analysis does not resolve the daily evolution, persistence, mesoscale organisation, or full-column moisture transport of individual storms. These unmeasured event-scale properties may distinguish models with similar scores for their climatological atmospheric background. In addition, only one realisation was available per model. The resampling analysis captures finite-period variability but cannot quantify the full range of initial-condition variability, and the exclusive use of SSP5-8.5 leaves scenario uncertainty unexamined. The reported projection range therefore excludes scenario uncertainty and provides only a lower-bound estimate of unforced variability.
+P	Operational cloud seeding remains an additional unresolved influence. Operation-level records were unavailable in the datasets analysed, so the frequency and timing of seeding relative to storm days could not be established. Its plausible contribution to absolute rainfall amounts or temporal estimates could therefore neither be bounded nor separated from natural variability. The observational rainfall series should consequently be interpreted as incorporating any effects of operational modification that may have occurred.
+P	These limitations define clear priorities for further research. Daily, event-conditioned circulation diagnostics are needed to evaluate storm occurrence, persistence, and rainfall efficiency, while full-column integrated vapour transport would remove the approximation imposed by the four-pressure-level calculation. The April 2024 event provides an opportunity for an out-of-sample assessment of whether the historical UAE Rainfall Circulation Signature identifies an exceptional storm that was not used to construct the reference. Initial-condition large ensembles or long pre-industrial control simulations would provide a more complete estimate of internal variability than finite-period resampling of one realisation. Denser gauge coverage combined with physiographic correction methods is also required to develop gridded rainfall estimates that account explicitly for topography and other sources of spatial heterogeneity. Finally, applying the same correction-transferability, family-wise validation, multiplicity, and predictor-coupling tests in other hyperarid regions would clarify the geographical scope of the findings. The analytical workflow is transferable, but the UAE moisture pathway and the absence of a detectable historical constraint should not be generalised without comparable regional evidence.
+H:Heading1	5. Conclusions
+P	Gauge observations establish a persistent west–east gradient in UAE rainfall extremes, supported by a coherent Arabian Sea–Gulf of Oman moisture pathway. The gauge-only GSOD comparison gives east/west ratios of 1.67 for annual rainfall and 2.06 for Rx1day, whereas station-corrected CHIRPS yields a smaller domain-scale Rx1day ratio of 1.32 and is suitable only for climatological spatial completion. Beyond this present-day spatial pattern, the available evidence does not support a robust historical trend or a strong constraint on future extreme-rainfall change. Within the available single-realisation ensemble, historical process fidelity did not predict projected Rx1day or R95p change under SSP5-8.5, while internal variability, model dependence, and downscaling choices contributed substantially to uncertainty. UAE climate-risk assessments should therefore retain the well-supported spatial gradient but represent future change using the full ensemble and product-dependent range.
+H:Heading1	CRediT authorship contribution statement
+P	Mohib Ullah: Conceptualization, Methodology, Software, Formal analysis, Data curation, Visualization, Writing – original draft.
+P	Adam Fenech: Supervision, Conceptualization, Writing – review and editing.
+P	Dan Scott: Methodology, Validation.
+P	Xander Wang: Writing – review and editing.
+P	Ross Gordon: Validation, Writing.
+H:Heading1	Funding
+P	This research was supported by the Dubai Future Foundation through its Research, Development, and Innovation (RDI) Grant Program, awarded to Canadian University Dubai under Project Reference No. 2025/DRDI0746. Adam Fenech served as Principal Investigator.
+H:Heading1	Declaration of competing interest
+P	The authors declare that they have no known competing financial interests or personal relationships that could have influenced the work reported in this paper.
+H:Heading1	Data and code availability
+P	CHIRPS, ERA5, MERRA-2, JRA-55, GSOD, NEX-GDDP-CMIP6, ISIMIP3b, and GADM data are publicly available from their respective providers. The UAE National Center of Meteorology supplied the NCM station data used in this study, subject to the provider’s access conditions.
+P	The analyses were conducted in Python using NumPy, pandas, xarray, and Matplotlib. Analysis scripts, derived tables, model manifests, and documented exclusions will be available from the corresponding author upon reasonable request.
+H:Heading1	Declaration of generative AI and AI-assisted technologies in the manuscript preparation process
+P	During preparation of this manuscript, the authors used ChatGPT (OpenAI) to support language editing and structural revision. The authors reviewed and edited all output and take full responsibility for the final content.
+H:Heading1	Acknowledgements
+P	The authors thank the Dubai Future Foundation for its financial support for the research reported in this paper.
+H:Heading1	References
+P	Baig, F., Abrar, M., Chen, H., Sherif, M., 2022. Rainfall consistency, variability, and concentration over the UAE: Satellite precipitation products versus rain-gauge observations. Remote Sensing 14, 5827. https://doi.org/10.3390/rs14225827
+P	Benjamini, Y., Hochberg, Y., 1995. Controlling the false discovery rate: a practical and powerful approach to multiple testing. Journal of the Royal Statistical Society B 57, 289–300.
+P	Brient, F., 2020. Reducing uncertainties in climate projections with emergent constraints: Concepts, examples and prospects. Advances in Atmospheric Sciences 37, 1–15. https://doi.org/10.1007/s00376-019-9140-8
+P	Brunner, L., Pendergrass, A.G., Lehner, F., Merrifield, A.L., Lorenz, R., Knutti, R., 2020. Reduced global warming from CMIP6 projections when weighting models by performance and independence. Earth System Dynamics 11, 995–1012. https://doi.org/10.5194/esd-11-995-2020
+P	Eyring, V., Bony, S., Meehl, G.A., Senior, C.A., Stevens, B., Stouffer, R.J., Taylor, K.E., 2016. Overview of the Coupled Model Intercomparison Project Phase 6 (CMIP6) experimental design and organization. Geoscientific Model Development 9, 1937–1958. https://doi.org/10.5194/gmd-9-1937-2016
+P	Francis, D., Fonseca, R., Nelli, N., Cherif, C., Yarragunta, Y., Zittis, G., de Vries, A.J., 2025. From cause to consequence: Examining the historic April 2024 rainstorm in the United Arab Emirates through the lens of climate change. npj Climate and Atmospheric Science 8, 183. https://doi.org/10.1038/s41612-025-01073-1
+P	Funk, C., Peterson, P., Landsfeld, M., et al., 2015. The climate hazards infrared precipitation with stations — a new environmental record for monitoring extremes. Scientific Data 2, 150066. https://doi.org/10.1038/sdata.2015.66
+P	Gelaro, R., et al., 2017. The Modern-Era Retrospective Analysis for Research and Applications, Version 2 (MERRA-2). Journal of Climate 30, 5419–5454. https://doi.org/10.1175/JCLI-D-16-0758.1
+P	Hall, A., Cox, P., Huntingford, C., Klein, S., 2019. Progressing emergent constraints on future climate change. Nature Climate Change 9, 269–278. https://doi.org/10.1038/s41558-019-0436-6
+P	Hamed, K.H., Rao, A.R., 1998. A modified Mann–Kendall trend test for autocorrelated data. Journal of Hydrology 204, 182–196. https://doi.org/10.1016/S0022-1694(97)00125-X
+P	Hersbach, H., et al., 2020. The ERA5 global reanalysis. Quarterly Journal of the Royal Meteorological Society 146, 1999–2049. https://doi.org/10.1002/qj.3803
+P	Kendall, M.G., 1975. Rank Correlation Methods, 4th ed. Charles Griffin, London.
+P	Knutti, R., Sedláček, J., Sanderson, B.M., Lorenz, R., Fischer, E.M., Eyring, V., 2017. A climate model projection weighting scheme accounting for performance and interdependence. Geophysical Research Letters 44, 1909–1918. https://doi.org/10.1002/2016GL072012
+P	Kobayashi, S., et al., 2015. The JRA-55 reanalysis: general specifications and basic characteristics. Journal of the Meteorological Society of Japan 93, 5–48. https://doi.org/10.2151/jmsj.2015-001
+P	Lange, S., 2019. Trend-preserving bias adjustment and statistical downscaling with ISIMIP3BASD (v1.0). Geoscientific Model Development 12, 3055–3070. https://doi.org/10.5194/gmd-12-3055-2019
+P	Mann, H.B., 1945. Nonparametric tests against trend. Econometrica 13, 245–259.
+P	Pathak, R., Dasari, H.P., Ashok, K., et al., 2025. Dynamics of intensification of extreme precipitation events over the Arabian Peninsula derived from CMIP6 simulations. npj Climate and Atmospheric Science 8, 126. https://doi.org/10.1038/s41612-025-01016-w
+P	Sen, P.K., 1968. Estimates of the regression coefficient based on Kendall’s tau. Journal of the American Statistical Association 63, 1379–1389.
+P	Shepherd, T.G., Boyd, E., Calel, R.A., Chapman, S.C., Dessai, S., Dima-West, I.M., Fowler, H.J., James, R., Maraun, D., Martius, O., Senior, C.A., Sobel, A.H., Stainforth, D.A., Tett, S.F.B., Trenberth, K.E., van den Hurk, B.J.J.M., Watkins, N.W., Wilby, R.L., Zenghelis, D.A., 2018. Storylines: an alternative approach to representing uncertainty in the physical aspects of climate change. Climatic Change 151, 555–571. https://doi.org/10.1007/s10584-018-2317-9
+P	Simpson, I.R., McKinnon, K.A., Davenport, F.V., Tingley, M., Lehner, F., Al Fahad, A., Chen, D., 2021. Emergent constraints on the large-scale atmospheric circulation and regional hydroclimate: Do they still work in CMIP6 and how much can they actually constrain the future? Journal of Climate 34, 6355–6377. https://doi.org/10.1175/JCLI-D-21-0055.1
+P	Smith, A., Lott, N., Vose, R., 2011. The Integrated Surface Database: recent developments and partnerships. Bulletin of the American Meteorological Society 92, 704–708. https://doi.org/10.1175/2011BAMS3015.1
+P	Taylor, K.E., 2001. Summarizing multiple aspects of model performance in a single diagram. Journal of Geophysical Research 106, 7183–7192. https://doi.org/10.1029/2000JD900719
+P	Theil, H., 1950. A rank-invariant method of linear and polynomial regression analysis. Proceedings of the Koninklijke Nederlandse Akademie van Wetenschappen 53, 386–392.
+P	Thrasher, B., Wang, W., Michaelis, A., Melton, F., Lee, T., Nemani, R., 2022. NASA global daily downscaled projections, CMIP6. Scientific Data 9, 262. https://doi.org/10.1038/s41597-022-01393-4
+P	Zhang, W., Furtado, K., Zhou, T., Wu, P., Chen, X., 2022. Constraining extreme precipitation projections using past precipitation variability. Nature Communications 13, 6319. https://doi.org/10.1038/s41467-022-34006-0
+P	Zhang, X., Alexander, L., Hegerl, G.C., Jones, P., Klein Tank, A.M.G., Peterson, T.C., Trewin, B., Zwiers, F.W., 2011. Indices for monitoring changes in extremes based on daily temperature and precipitation data. WIREs Climate Change 2, 851–870. https://doi.org/10.1002/wcc.147
+H:Heading1	Supplementary material
+H:Heading2	Supplementary Methods S1. Trend estimation and sensitivity analysis
+P	Wet-season (November–April) regional-mean index series over 1982–2024 (43 seasons) were tested non-parametrically. The Mann–Kendall statistic (Mann, 1945; Kendall, 1975) is
+P	with tie-corrected variance
+P	where is the number of ties of extent , and standardised statistic
+P	Trend magnitude is the Theil–Sen slope (Theil, 1950; Sen, 1968),
+P	reported per decade as a percentage of the series mean with Mann–Kendall-based 95 % confidence intervals. Serial correlation is addressed by the Hamed–Rao variance inflation (Hamed and Rao, 1998),
+P	Rank-autocorrelation lags significant at the 5 % level were included in the variance adjustment. Benjamini–Hochberg control was applied across the 12 index–region tests at a 5 % false-discovery rate. Sensitivity was assessed by excluding 2024, and robustness by repeating the analysis with raw CHIRPS and the Dubai gauge record. The April 2024 storm was retained only as context for the magnitude of present-day variability.
+P	Figure S1. Taylor-diagram evaluation of ten gridded rainfall products against the NCM Dubai daily gauge record. Panels compare (a) wet-season rainfall totals and (b) wet-day frequency (≥1 mm). Metrics were calculated using all complete November–April seasons available for each product within 1991–2020, retaining seasons with at least 150 valid daily values (n = 21–30, depending on the product). The common complete-season overlap across all ten products is 1999–2018 (November 1998–April 2018; 20 seasons). Angular position represents temporal correlation, radial distance represents the standard-deviation ratio relative to NCM, and the black star marks the NCM reference. Triangles indicate standard-deviation ratios exceeding the plotted range.
+P	Table S1. Inventory of all CMIP6, NEX-GDDP-CMIP6, and ISIMIP3b simulations used in the analysis, including ensemble members, Process Fidelity Scores and ranks, and documented exclusions. The inventory is provided as a separate CSV file.
+P	Figure S2. Signal-to-noise partition of the projected-change spread for 18 NEX-GDDP-CMIP6 models under SSP5-8.5, calculated for 2076–2100 relative to 1990–2014. Blue bars indicate the standard deviation of projected change across models, and orange bars indicate mean within-model sampling variability estimated by resampling the 25 wet seasons in each period. Percentages give the contribution of finite-period sampling to the inter-model variance. Because only one realisation was available per model, the estimated sampling fractions of 37–48% capture mainly higher-frequency internal variability and represent lower bounds on its total contribution.

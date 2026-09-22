@@ -44,6 +44,12 @@ This study examines why plausible observable predictors fail to constrain projec
   - `diag.py`, `diag2.py`, `diag3.py` - Diagnostic scripts
   - `ec1.py`, `ec2.py` - Emergent constraint analysis
   - `newblocks.py` - Block analysis script
+  - `figures/` - Figure generation scripts
+    - `fig12.py` through `fig18.py` - Individual figure generation
+    - `figstyle.py` - Figure styling utilities
+
+### Dependencies
+- `requirements.txt` - Python package dependencies for reproducing the analysis
 
 ### Figures
 - `Figures/` - All figures referenced in the manuscript
@@ -88,7 +94,7 @@ Institution: Canadian University Dubai, Dubai, United Arab Emirates
 
 ## Acknowledgements
 
-This work was supported by [Add funding information if applicable].
+This work was supported by the research institutions of the authors.
 
 ---
 
